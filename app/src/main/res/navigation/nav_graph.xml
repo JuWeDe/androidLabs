@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/onBoardFragment">
+
+    <fragment
+        android:id="@+id/SettingsFragment"
+        android:name="com.example.messenger411.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+
+    </fragment>
+    <fragment
+        android:id="@+id/onBoardFragment"
+        android:name="com.example.messenger411.OnBoardFragment"
+        android:label="On Board Fragment"
+        tools:layout="@layout/fragment_on_board">
+        <action
+            android:id="@+id/action_onBoardFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_onBoardFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_onBoardFragment_to_DatastoreFragment"
+            app:destination="@id/SettingsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.messenger411.SignInFragment"
+        android:label="Sign In Fragment"
+        tools:layout="@layout/fragment_sign_in">
+
+        <action
+            android:id="@+id/action_signInFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <argument
+            android:name="email"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="password"
+            android:defaultValue=""
+            app:argType="string" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.messenger411.SignUpFragment"
+        android:label="Sign Up Fragment"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <argument
+            android:name="name"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="email"
+            android:defaultValue=""
+            app:argType="string" />
+        <argument
+            android:name="password"
+            android:defaultValue=""
+            app:argType="string" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.messenger411.ChatFragment"
+        android:label="Chat Fragment"
+        tools:layout="@layout/fragment_chat">
+        <action
+            android:id="@+id/action_ChatFragment_to_Settings"
+            app:destination="@id/SettingsFragment" />
+    </fragment>
+
+</navigation>

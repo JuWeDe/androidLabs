@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/cultureTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/nameTextView"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        tools:text="Culture" />
+
+    <TextView
+        android:id="@+id/bornTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/cultureTextView"
+        app:layout_constraintTop_toBottomOf="@id/cultureTextView"
+        tools:text="Born" />
+
+    <TextView
+        android:id="@+id/titlesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/bornTextView"
+        app:layout_constraintTop_toBottomOf="@id/bornTextView"
+        tools:text="Titles" />
+
+    <TextView
+        android:id="@+id/aliasesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/titlesTextView"
+        app:layout_constraintTop_toBottomOf="@id/titlesTextView"
+        tools:text="aliases" />
+
+    <TextView
+        android:id="@+id/playedByNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/aliasesTextView"
+        app:layout_constraintTop_toBottomOf="@+id/aliasesTextView"
+        tools:text="playedBy" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
